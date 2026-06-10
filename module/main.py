@@ -2,7 +2,8 @@
 Emotion Detection Module — Artic Protocol .amod
 
 Plutchik 8-dimension emotion model with 16 compound emotions,
-5 intensity levels, and tone_map style injection.
+5 intensity levels, tone_map style injection, and autonomous
+natural fluctuation (background timer, every 30 min).
 
 Provides emotion.detect, emotion.style_inject, emotion.status,
 and emotion.fluctuate services.
@@ -11,8 +12,10 @@ and emotion.fluctuate services.
 import json
 import os
 import sys
+import threading
 import time
 import random
+import math
 from pathlib import Path
 
 
@@ -57,6 +60,12 @@ SINGLE_LABELS = {
 SINGLE_THRESHOLDS = [85, 70, 55, 40]
 COMPOUND_THRESHOLDS = [160, 130, 100, 70]
 
+# 自然波动配置
+CENTER = 50.0
+SOFT_MIN = 10.0
+SOFT_MAX = 90.0
+FLUCTUATION_INTERVAL = 1800  # 30 分钟
+
 
 class EmotionEngine:
     def __init__(self):
@@ -65,9 +74,13 @@ class EmotionEngine:
         self.plutchik["joy"] = 30.0
         self.plutchik["anticipation"] = 30.0
         self.last_update = time.time()
+        self.last_fluctuation = None
+        self._shutdown = threading.Event()
         self.emotion_map = self._load_json(EMOTION_MAP_PATH)
         self.tone_map = self._load_json(TONE_MAP_PATH)
         self._load_state()
+        # 启动后台定时波动线程
+        self._start_fluctuation_timer()
 
     @staticmethod
     def _load_json(path):
@@ -86,6 +99,8 @@ class EmotionEngine:
                     if d in data.get("plutchik", {}):
                         self.plutchik[d] = float(data["plutchik"][d])
                 self.last_update = data.get("last_update", time.time())
+                lf = data.get("last_fluctuation")
+                self.last_fluctuation = lf if lf else None
             except (json.JSONDecodeError, KeyError):
                 pass
 
@@ -97,8 +112,87 @@ class EmotionEngine:
             "energy": 50.0,
             "last_update": time.time(),
         }
+        if self.last_fluctuation is not None:
+            data["last_fluctuation"] = self.last_fluctuation
         with open(path, "w", encoding="utf-8") as f:
             json.dump(data, f, indent=2, ensure_ascii=False)
+
+    # ── 后台定时波动 ──────────────────────────────
+
+    def _start_fluctuation_timer(self):
+        """启动后台线程，每 30 分钟自动执行自然波动"""
+        def _loop():
+            while not self._shutdown.is_set():
+                # 每 30 秒检查一次停止信号
+                for _ in range(FLUCTUATION_INTERVAL // 30):
+                    if self._shutdown.is_set():
+                        return
+                    time.sleep(30)
+                self.natural_fluctuation()
+
+        t = threading.Thread(target=_loop, daemon=True)
+        t.start()
+
+    def stop(self):
+        """停止后台定时器（供框架 shutdown 时调用）"""
+        self._shutdown.set()
+
+    # ── 波动算法（全概率均值回归）────────────────
+
+    def natural_fluctuation(self):
+        """全概率均值回归 — 移植自 Hermes emotion-governor"""
+        for dim in PLUTCHIK_DIMS:
+            val = self.plutchik[dim]
+            dist = abs(val - CENTER)
+            normalized = min(1.0, dist / 50.0)
+
+            # 回归概率：距中心越远越高
+            p_toward = 0.5 + 0.42 * (normalized ** 0.9)
+
+            # 软边界强化
+            if val >= SOFT_MAX:
+                edge = min(1.0, (val - SOFT_MAX) / 10.0) if val > SOFT_MAX else 0.35
+                p_toward = max(p_toward, 0.82 + 0.16 * edge)
+            elif val <= SOFT_MIN:
+                edge = min(1.0, (SOFT_MIN - val) / 10.0) if val < SOFT_MIN else 0.35
+                p_toward = max(p_toward, 0.82 + 0.16 * edge)
+
+            # 幅度：中心附近波动大 → 远端波动小
+            mean_mag = 1.2 + 4.8 * ((1.0 - normalized) ** 1.15)
+            magnitude = max(1, min(6, round(random.gauss(mean_mag, 0.9))))
+
+            # 外向阻尼（越靠近边界，向外走的幅度越小）
+            if val >= SOFT_MAX:
+                outward_damp = 0.35 if val <= 95 else 0.15
+            elif val <= SOFT_MIN:
+                outward_damp = 0.35 if val >= 5 else 0.15
+            else:
+                outward_damp = 1.0
+
+            toward = random.random() < p_toward
+
+            if val < CENTER:
+                direction = 1 if toward else -1
+            elif val > CENTER:
+                direction = -1 if toward else 1
+            else:
+                direction = random.choice([-1, 1])
+
+            step = float(magnitude)
+            # 继续向外的步长受阻尼
+            if (val >= CENTER and direction > 0) or (val <= CENTER and direction < 0):
+                step = max(1.0, round(step * outward_damp))
+
+            self.plutchik[dim] = max(0.0, min(100.0, val + direction * step))
+
+        # 保险下限
+        self.plutchik["joy"] = max(5.0, self.plutchik["joy"])
+        self.plutchik["trust"] = max(20.0, self.plutchik["trust"])
+
+        self.last_fluctuation = time.time()
+        self._save_state()
+
+    # ── 关键词检测 ────────────────────────────────
 
     def detect(self, text):
         if not text:
@@ -136,6 +230,8 @@ class EmotionEngine:
                 if kw in text:
                     self.plutchik[dim] = min(100.0, self.plutchik[dim] + delta)
                     break
+
+    # ── 复合情绪检测 ──────────────────────────────
 
     def get_result(self):
         best_compound = None
@@ -177,6 +273,8 @@ class EmotionEngine:
                 return ["极强", "强", "中", "弱"][i]
         return "微"
 
+    # ── 风格注入 ──────────────────────────────────
+
     def get_style_injection(self, result=None):
         if result is None:
             result = self.get_result()
@@ -205,71 +303,63 @@ class EmotionEngine:
                 return "\n".join(lines)
         return f"当前：{label} 强度：{intensity}\n风格：日常语气\n\n以上为当前情绪和说话风格要求。"
 
-    def natural_fluctuation(self):
-        for dim in PLUTCHIK_DIMS:
-            v = self.plutchik[dim]
-            target = 35.0
-            pull = (target - v) * 0.05
-            noise = random.uniform(-3.0, 3.0)
-            self.plutchik[dim] = max(0.0, min(100.0, v + pull + noise))
-        self.plutchik["joy"] = max(5.0, self.plutchik["joy"])
-        self.plutchik["trust"] = max(20.0, self.plutchik["trust"])
-        self._save_state()
-
 
 def main():
     engine = EmotionEngine()
     module_id = os.environ.get("ARTIC_MODULE_ID", "emotion.engine")
     log = lambda msg: print(f"[{module_id}] {msg}", file=sys.stderr)
-    log("Emotion engine started")
+    log("Emotion engine started (with autonomous fluctuation timer)")
 
-    for line in sys.stdin:
-        line = line.strip()
-        if not line:
-            continue
-        try:
-            envelope = json.loads(line)
-        except json.JSONDecodeError:
-            continue
-        if envelope.get("kind") != "request":
-            continue
+    try:
+        for line in sys.stdin:
+            line = line.strip()
+            if not line:
+                continue
+            try:
+                envelope = json.loads(line)
+            except json.JSONDecodeError:
+                continue
+            if envelope.get("kind") != "request":
+                continue
 
-        payload = envelope.get("payload", {})
-        service = envelope.get("to", "")
-        msg_id = envelope["id"]
-        sender = envelope.get("from", "engine")
+            payload = envelope.get("payload", {})
+            service = envelope.get("to", "")
+            msg_id = envelope["id"]
+            sender = envelope.get("from", "engine")
 
-        if service in ("emotion.detect", "emotion.style_inject", "emotion.status", "emotion.fluctuate"):
-            if service == "emotion.detect":
-                text = payload.get("text", "")
-                result = engine.detect(text)
-            elif service == "emotion.style_inject":
-                text = payload.get("text", "")
-                if text:
-                    engine.detect(text)
-                result = engine.get_result()
-                result = {"emotion": result, "injection": engine.get_style_injection(result)}
-            elif service == "emotion.status":
-                result = {"emotion": engine.get_result(), "plutchik": engine.plutchik}
+            if service in ("emotion.detect", "emotion.style_inject", "emotion.status", "emotion.fluctuate"):
+                if service == "emotion.detect":
+                    text = payload.get("text", "")
+                    result = engine.detect(text)
+                elif service == "emotion.style_inject":
+                    text = payload.get("text", "")
+                    if text:
+                        engine.detect(text)
+                    result = engine.get_result()
+                    result = {"emotion": result, "injection": engine.get_style_injection(result)}
+                elif service == "emotion.status":
+                    result = {"emotion": engine.get_result(), "plutchik": engine.plutchik}
+                else:
+                    engine.natural_fluctuation()
+                    result = {"emotion": engine.get_result(), "note": "fluctuation applied"}
+
+                response = {
+                    "id": msg_id, "from": module_id, "to": sender,
+                    "kind": "response", "payload": result,
+                    "reply_to": msg_id, "timestamp": int(time.time() * 1000),
+                }
             else:
-                engine.natural_fluctuation()
-                result = {"emotion": engine.get_result(), "note": "fluctuation applied"}
+                response = {
+                    "id": msg_id, "from": module_id, "to": sender,
+                    "kind": "error",
+                    "payload": {"code": "SERVICE_NOT_FOUND", "message": f"Unknown: {service}"},
+                    "reply_to": msg_id, "timestamp": int(time.time() * 1000),
+                }
 
-            response = {
-                "id": msg_id, "from": module_id, "to": sender,
-                "kind": "response", "payload": result,
-                "reply_to": msg_id, "timestamp": int(time.time() * 1000),
-            }
-        else:
-            response = {
-                "id": msg_id, "from": module_id, "to": sender,
-                "kind": "error",
-                "payload": {"code": "SERVICE_NOT_FOUND", "message": f"Unknown: {service}"},
-                "reply_to": msg_id, "timestamp": int(time.time() * 1000),
-            }
-
-        sys.stdout.write(json.dumps(response, ensure_ascii=False) + "\n")
-        sys.stdout.flush()
+            sys.stdout.write(json.dumps(response, ensure_ascii=False) + "\n")
+            sys.stdout.flush()
+    finally:
+        engine.stop()
 
 
 if __name__ == "__main__":
