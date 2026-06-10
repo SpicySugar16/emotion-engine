@@ -1,0 +1,24 @@
+[module]
+id = "emotion.engine"
+name = "Emotion Detection Engine"
+version = "0.1.0"
+language = "python"
+entry = "module/main.py"
+description = "Plutchik-based emotion detection with 16 compound emotions, 5 intensity levels, and tone_map style injection"
+
+[module.author]
+name = "Artic Community"
+email = "community@artic-protocol.org"
+url = "https://github.com/artic-community"
+
+[module.declare]
+provides = ["emotion.detect", "emotion.style_inject", "emotion.status", "emotion.fluctuate"]
+requires = []
+handlers = ["startup"]
+
+[compatibility]
+min_protocol_version = "v0.1.0"
+engines = ["tremolite", "*"]
+
+[install]
+env = { LOG_LEVEL = "info" }

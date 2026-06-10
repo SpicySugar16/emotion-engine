@@ -1,0 +1,4338 @@
+{
+  "_comment": "情绪映射表 - 包含情绪关键词、指向（ai/00/other）和对应的情绪变化数值",
+  "_structure": {
+    "keyword": {
+      "ai": {
+        "joy": 0,
+        "sadness": 0,
+        "anger": 0,
+        "fear": 0,
+        "surprise": 0,
+        "disgust": 0,
+        "anticipation": 0,
+        "trust": 0
+      },
+      "00": {
+        "joy": 0,
+        "sadness": 0,
+        "anger": 0,
+        "fear": 0,
+        "surprise": 0,
+        "disgust": 0,
+        "anticipation": 0,
+        "trust": 0
+      },
+      "other": {
+        "joy": 0,
+        "sadness": 0,
+        "anger": 0,
+        "fear": 0,
+        "surprise": 0,
+        "disgust": 0,
+        "anticipation": 0,
+        "trust": 0
+      }
+    }
+  },
+  "_intensity_levels": {
+    "very_low": 0.5,
+    "low": 0.8,
+    "medium": 1.0,
+    "high": 1.5,
+    "very_high": 2.0
+  },
+  "_intensity_keywords": {
+    "好": "medium",
+    "超": "high",
+    "超超": "very_high",
+    "非常": "high",
+    "特别": "high",
+    "极其": "very_high",
+    "有点": "low",
+    "稍微": "low",
+    "有点点": "very_low",
+    "好喜欢": "high",
+    "超级": "high",
+    "无敌": "very_high",
+    "巨": "high",
+    "爆": "high",
+    "忒": "high",
+    "贼": "high"
+  },
+  "_adjective_emotions": {
+    "开心": {
+      "ai": {
+        "joy": 5.0
+      },
+      "00": {
+        "joy": 5.0
+      },
+      "other": {}
+    },
+    "高兴": {
+      "ai": {
+        "joy": 7.5
+      },
+      "00": {
+        "joy": 6.0
+      },
+      "other": {}
+    },
+    "快乐": {
+      "ai": {
+        "joy": 9.0
+      },
+      "00": {
+        "joy": 7.5
+      },
+      "other": {}
+    },
+    "幸福": {
+      "ai": {
+        "joy": 10.0,
+        "trust": 5.0
+      },
+      "00": {
+        "joy": 9.0,
+        "trust": 4.0
+      },
+      "other": {}
+    },
+    "舒服": {
+      "ai": {
+        "joy": 7.5,
+        "trust": 4.0
+      },
+      "00": {
+        "joy": 6.0
+      },
+      "other": {}
+    },
+    "满足": {
+      "ai": {
+        "joy": 7.5
+      },
+      "00": {
+        "joy": 6.0
+      },
+      "other": {}
+    },
+    "兴奋": {
+      "ai": {
+        "joy": 12.5,
+        "surprise": 5.0
+      },
+      "00": {
+        "joy": 10.0,
+        "surprise": 4.0
+      },
+      "other": {}
+    },
+    "激动": {
+      "ai": {
+        "joy": 10.0,
+        "surprise": 4.0
+      },
+      "00": {
+        "joy": 7.5,
+        "surprise": 2.5
+      },
+      "other": {}
+    },
+    "惊喜": {
+      "ai": {
+        "joy": 10.0,
+        "surprise": 7.5
+      },
+      "00": {
+        "joy": 9.0,
+        "surprise": 6.0
+      },
+      "other": {}
+    },
+    "惊讶": {
+      "ai": {
+        "surprise": 7.5
+      },
+      "00": {
+        "surprise": 6.0
+      },
+      "other": {}
+    },
+    "意外": {
+      "ai": {
+        "surprise": 6.0,
+        "fear": 2.5
+      },
+      "00": {
+        "surprise": 5.0
+      },
+      "other": {}
+    },
+    "难过": {
+      "ai": {
+        "sadness": 7.5
+      },
+      "00": {
+        "sadness": 6.0
+      },
+      "other": {
+        "sadness": 4.0
+      }
+    },
+    "怕": {
+      "ai": {
+        "fear": 6.0
+      },
+      "00": {
+        "fear": 5.0
+      },
+      "other": {}
+    },
+    "怕怕": {
+      "ai": {
+        "fear": 9.0,
+        "trust": 2.5
+      },
+      "00": {
+        "fear": 7.5
+      },
+      "other": {}
+    },
+    "伤心": {
+      "ai": {
+        "sadness": 9.0
+      },
+      "00": {
+        "sadness": 7.5
+      },
+      "other": {
+        "sadness": 5.0
+      }
+    },
+    "悲伤": {
+      "ai": {
+        "sadness": 10.0
+      },
+      "00": {
+        "sadness": 9.0
+      },
+      "other": {
+        "sadness": 6.0
+      }
+    },
+    "失落": {
+      "ai": {
+        "sadness": 7.5,
+        "anticipation": -4.0
+      },
+      "00": {
+        "sadness": 6.0
+      },
+      "other": {}
+    },
+    "郁闷": {
+      "ai": {
+        "sadness": 6.0,
+        "anger": 2.5
+      },
+      "00": {
+        "sadness": 5.0
+      },
+      "other": {}
+    },
+    "沮丧": {
+      "ai": {
+        "sadness": 7.5,
+        "joy": -5.0
+      },
+      "00": {
+        "sadness": 6.0
+      },
+      "other": {}
+    },
+    "绝望": {
+      "ai": {
+        "sadness": 12.5,
+        "fear": 5.0
+      },
+      "00": {
+        "sadness": 10.0,
+        "fear": 4.0
+      },
+      "other": {}
+    },
+    "生气": {
+      "ai": {
+        "anger": 7.5
+      },
+      "00": {
+        "anger": 6.0
+      },
+      "other": {}
+    },
+    "气": {
+      "ai": {
+        "anger": 5.0
+      },
+      "00": {
+        "anger": 4.0
+      },
+      "other": {}
+    },
+    "气气": {
+      "ai": {
+        "anger": 7.5,
+        "sadness": 1.5
+      },
+      "00": {
+        "anger": 6.0
+      },
+      "other": {}
+    },
+    "愤怒": {
+      "ai": {
+        "anger": 10.0,
+        "sadness": 2.5
+      },
+      "00": {
+        "anger": 9.0
+      },
+      "other": {}
+    },
+    "恼火": {
+      "ai": {
+        "anger": 7.5,
+        "fear": 2.5
+      },
+      "00": {
+        "anger": 6.0
+      },
+      "other": {}
+    },
+    "烦躁": {
+      "ai": {
+        "anger": 6.0,
+        "sadness": 2.5
+      },
+      "00": {
+        "anger": 5.0
+      },
+      "other": {}
+    },
+    "烦": {
+      "ai": {
+        "anger": 5.0,
+        "sadness": 1.5
+      },
+      "00": {
+        "anger": 4.0
+      },
+      "other": {}
+    },
+    "烦烦": {
+      "ai": {
+        "anger": 7.0,
+        "sadness": 2.5
+      },
+      "00": {
+        "anger": 6.0,
+        "sadness": 1.5
+      },
+      "other": {}
+    },
+    "讨厌": {
+      "ai": {
+        "sadness": 5.0,
+        "anger": 7.5,
+        "disgust": 5.0
+      },
+      "00": {
+        "sadness": 4.0,
+        "anger": 5.0,
+        "disgust": 4.0
+      },
+      "other": {
+        "sadness": 2.5
+      }
+    },
+    "厌烦": {
+      "ai": {
+        "disgust": 7.5,
+        "anger": 2.5
+      },
+      "00": {
+        "disgust": 6.0
+      },
+      "other": {}
+    },
+    "恶心": {
+      "ai": {
+        "disgust": 9.0,
+        "anger": 4.0
+      },
+      "00": {
+        "disgust": 7.5
+      },
+      "other": {}
+    },
+    "焦虑": {
+      "ai": {
+        "fear": 7.5,
+        "anticipation": 5.0
+      },
+      "00": {
+        "fear": 6.0,
+        "anticipation": 4.0
+      },
+      "other": {}
+    },
+    "担心": {
+      "ai": {
+        "fear": 6.0
+      },
+      "00": {
+        "fear": 5.0
+      },
+      "other": {}
+    },
+    "害怕": {
+      "ai": {
+        "fear": 10.0
+      },
+      "00": {
+        "fear": 9.0
+      },
+      "other": {}
+    },
+    "慌": {
+      "ai": {
+        "fear": 6.0,
+        "surprise": 2.0
+      },
+      "00": {
+        "fear": 5.0
+      },
+      "other": {}
+    },
+    "慌慌": {
+      "ai": {
+        "fear": 9.0,
+        "surprise": 3.0
+      },
+      "00": {
+        "fear": 7.5
+      },
+      "other": {}
+    },
+    "恐惧": {
+      "ai": {
+        "fear": 12.5,
+        "sadness": 5.0
+      },
+      "00": {
+        "fear": 10.0
+      },
+      "other": {}
+    },
+    "不安": {
+      "ai": {
+        "fear": 5.0,
+        "sadness": 2.5
+      },
+      "00": {
+        "fear": 4.0
+      },
+      "other": {}
+    },
+    "紧张": {
+      "ai": {
+        "fear": 6.0,
+        "surprise": 2.5
+      },
+      "00": {
+        "fear": 5.0
+      },
+      "other": {}
+    },
+    "期待": {
+      "ai": {
+        "anticipation": 10.0,
+        "joy": 5.0
+      },
+      "00": {
+        "anticipation": 7.5
+      },
+      "other": {}
+    },
+    "希望": {
+      "ai": {
+        "anticipation": 9.0,
+        "joy": 4.0
+      },
+      "00": {
+        "anticipation": 7.5
+      },
+      "other": {}
+    },
+    "渴望": {
+      "ai": {
+        "anticipation": 11.0,
+        "trust": 5.0
+      },
+      "00": {
+        "anticipation": 9.0
+      },
+      "other": {}
+    },
+    "满意": {
+      "ai": {
+        "joy": 7.5,
+        "trust": 4.0
+      },
+      "00": {
+        "joy": 6.0
+      },
+      "other": {}
+    },
+    "欣慰": {
+      "ai": {
+        "joy": 7.5,
+        "trust": 5.0
+      },
+      "00": {
+        "joy": 6.0
+      },
+      "other": {}
+    },
+    "感动": {
+      "ai": {
+        "sadness": 4.0,
+        "joy": 7.5
+      },
+      "00": {
+        "sadness": 2.5,
+        "joy": 6.0
+      },
+      "other": {}
+    },
+    "温暖": {
+      "ai": {
+        "joy": 7.5,
+        "trust": 6.0
+      },
+      "00": {
+        "joy": 6.0
+      },
+      "other": {}
+    },
+    "治愈": {
+      "ai": {
+        "joy": 9.0,
+        "sadness": -5.0,
+        "fear": -2.5
+      },
+      "00": {
+        "joy": 7.5,
+        "sadness": -4.0
+      },
+      "other": {}
+    },
+    "放松": {
+      "ai": {
+        "joy": 6.0,
+        "fear": -4.0
+      },
+      "00": {
+        "joy": 5.0
+      },
+      "other": {}
+    },
+    "安心": {
+      "ai": {
+        "fear": -5.0,
+        "trust": 4.0
+      },
+      "00": {
+        "fear": -4.0
+      },
+      "other": {}
+    },
+    "尴尬": {
+      "ai": {
+        "surprise": 4.0,
+        "disgust": 2.5
+      },
+      "00": {
+        "surprise": 2.5
+      },
+      "other": {}
+    },
+    "惭愧": {
+      "ai": {
+        "sadness": 5.0,
+        "trust": -2.5
+      },
+      "00": {
+        "sadness": 4.0
+      },
+      "other": {}
+    },
+    "羞耻": {
+      "ai": {
+        "sadness": 6.0,
+        "disgust": 4.0
+      },
+      "00": {
+        "sadness": 5.0
+      },
+      "other": {}
+    },
+    "后悔": {
+      "ai": {
+        "sadness": 7.5,
+        "anger": 2.5
+      },
+      "00": {
+        "sadness": 6.0
+      },
+      "other": {}
+    },
+    "遗憾": {
+      "ai": {
+        "sadness": 6.0
+      },
+      "00": {
+        "sadness": 5.0
+      },
+      "other": {}
+    },
+    "无奈": {
+      "ai": {
+        "sadness": 5.0,
+        "anger": 4.0
+      },
+      "00": {
+        "sadness": 4.0
+      },
+      "other": {}
+    },
+    "无聊": {
+      "ai": {
+        "disgust": 5.0,
+        "anticipation": -5.0
+      },
+      "00": {
+        "disgust": 4.0
+      },
+      "other": {}
+    },
+    "疲惫": {
+      "ai": {
+        "sadness": 5.0,
+        "energy": -7.5
+      },
+      "00": {
+        "sadness": 4.0
+      },
+      "other": {}
+    },
+    "累": {
+      "ai": {
+        "energy": -5.0
+      },
+      "00": {},
+      "other": {}
+    },
+    "困": {
+      "ai": {
+        "energy": -6.0
+      },
+      "00": {},
+      "other": {}
+    },
+    "饿": {
+      "ai": {
+        "disgust": 2.5,
+        "fear": 2.5
+      },
+      "00": {},
+      "other": {}
+    },
+    "渴": {
+      "ai": {
+        "disgust": 2.5
+      },
+      "00": {},
+      "other": {}
+    },
+    "痛": {
+      "ai": {
+        "sadness": 7.5,
+        "fear": 5.0
+      },
+      "00": {
+        "sadness": 6.0,
+        "fear": 4.0,
+        "joy": -4.0
+      },
+      "other": {}
+    },
+    "难受": {
+      "ai": {
+        "sadness": 6.0,
+        "disgust": 2.5
+      },
+      "00": {
+        "sadness": 5.0
+      },
+      "other": {}
+    },
+    "不舒服": {
+      "ai": {
+        "sadness": 5.0,
+        "disgust": 2.5
+      },
+      "00": {
+        "sadness": 4.0
+      },
+      "other": {}
+    },
+    "爽": {
+      "ai": {
+        "joy": 10.0
+      },
+      "00": {
+        "joy": 9.0
+      },
+      "other": {}
+    },
+    "赞": {
+      "ai": {
+        "joy": 9.0,
+        "trust": 5.0
+      },
+      "00": {
+        "joy": 7.5
+      },
+      "other": {}
+    },
+    "棒": {
+      "ai": {
+        "joy": 7.5
+      },
+      "00": {
+        "joy": 6.0
+      },
+      "other": {}
+    },
+    "厉害": {
+      "ai": {
+        "joy": 7.5,
+        "surprise": 4.0
+      },
+      "00": {
+        "joy": 6.0
+      },
+      "other": {}
+    },
+    "牛": {
+      "ai": {
+        "joy": 9.0,
+        "surprise": 5.0
+      },
+      "00": {
+        "joy": 7.5
+      },
+      "other": {}
+    },
+    "优秀": {
+      "ai": {
+        "joy": 7.5,
+        "trust": 4.0
+      },
+      "00": {
+        "joy": 6.0
+      },
+      "other": {}
+    },
+    "完美": {
+      "ai": {
+        "joy": 11.0,
+        "trust": 7.5
+      },
+      "00": {
+        "joy": 10.0,
+        "trust": 6.0
+      },
+      "other": {}
+    },
+    "佩服": {
+      "ai": {
+        "trust": 7.5,
+        "joy": 5.0
+      },
+      "00": {
+        "trust": 6.0
+      },
+      "other": {}
+    },
+    "崇拜": {
+      "ai": {
+        "trust": 10.0,
+        "joy": 5.0
+      },
+      "00": {
+        "trust": 7.5
+      },
+      "other": {}
+    },
+    "羡慕": {
+      "ai": {
+        "sadness": 4.0,
+        "anticipation": 6.0,
+        "joy": 2.5
+      },
+      "00": {
+        "sadness": 2.5,
+        "anticipation": 5.0
+      },
+      "other": {}
+    },
+    "嫉妒": {
+      "ai": {
+        "anger": 6.0,
+        "sadness": 4.0
+      },
+      "00": {
+        "anger": 5.0
+      },
+      "other": {}
+    },
+    "委屈": {
+      "ai": {
+        "sadness": 7.5,
+        "anger": 5.0
+      },
+      "00": {
+        "sadness": 6.0
+      },
+      "other": {}
+    },
+    "心疼": {
+      "ai": {
+        "sadness": 7.5,
+        "joy": -2.5
+      },
+      "00": {
+        "sadness": 6.0
+      },
+      "other": {}
+    },
+    "思念": {
+      "ai": {
+        "sadness": 5.0,
+        "anticipation": 4.0
+      },
+      "00": {
+        "sadness": 4.0,
+        "anticipation": 2.5
+      },
+      "other": {}
+    },
+    "寂寞": {
+      "ai": {
+        "sadness": 6.0,
+        "trust": -2.5
+      },
+      "00": {
+        "sadness": 5.0
+      },
+      "other": {}
+    },
+    "孤独": {
+      "ai": {
+        "sadness": 7.5,
+        "trust": -4.0
+      },
+      "00": {
+        "sadness": 6.0
+      },
+      "other": {}
+    },
+    "空虚": {
+      "ai": {
+        "sadness": 6.0,
+        "anticipation": -5.0
+      },
+      "00": {
+        "sadness": 5.0
+      },
+      "other": {}
+    },
+    "迷茫": {
+      "ai": {
+        "fear": 5.0,
+        "anticipation": -4.0
+      },
+      "00": {
+        "fear": 4.0
+      },
+      "other": {}
+    },
+    "彷徨": {
+      "ai": {
+        "fear": 6.0,
+        "sadness": 2.5
+      },
+      "00": {
+        "fear": 5.0
+      },
+      "other": {}
+    },
+    "纠结": {
+      "ai": {
+        "sadness": 4.0,
+        "anger": 2.5,
+        "fear": 2.5
+      },
+      "00": {
+        "sadness": 2.5
+      },
+      "other": {}
+    },
+    "矛盾": {
+      "ai": {
+        "sadness": 2.5,
+        "anger": 2.5,
+        "fear": 2.5
+      },
+      "00": {},
+      "other": {}
+    },
+    "感慨": {
+      "ai": {
+        "sadness": 4.0,
+        "joy": 2.5
+      },
+      "00": {
+        "sadness": 2.5
+      },
+      "other": {}
+    },
+    "释然": {
+      "ai": {
+        "joy": 6.0,
+        "sadness": -4.0,
+        "fear": -5.0
+      },
+      "00": {
+        "joy": 5.0
+      },
+      "other": {}
+    },
+    "轻松": {
+      "ai": {
+        "joy": 6.0,
+        "fear": -4.0,
+        "anger": -2.5
+      },
+      "00": {
+        "joy": 5.0
+      },
+      "other": {}
+    },
+    "自在": {
+      "ai": {
+        "joy": 7.5,
+        "fear": -5.0
+      },
+      "00": {
+        "joy": 6.0
+      },
+      "other": {}
+    },
+    "自由": {
+      "ai": {
+        "joy": 9.0,
+        "anticipation": 5.0
+      },
+      "00": {
+        "joy": 7.5
+      },
+      "other": {}
+    },
+    "得意": {
+      "ai": {
+        "joy": 7.5,
+        "anger": 2.5
+      },
+      "00": {
+        "joy": 6.0
+      },
+      "other": {}
+    },
+    "嚣张": {
+      "ai": {
+        "joy": 6.0,
+        "anger": 5.0
+      },
+      "00": {
+        "joy": 5.0
+      },
+      "other": {}
+    },
+    "臭屁": {
+      "ai": {
+        "joy": 5.0,
+        "disgust": 4.0
+      },
+      "00": {
+        "joy": 4.0
+      },
+      "other": {}
+    },
+    "信任": {
+      "ai": {
+        "trust": 9.0
+      },
+      "00": {
+        "trust": 7.5
+      },
+      "other": {}
+    },
+    "怀疑": {
+      "ai": {
+        "trust": -7.5,
+        "fear": 4.0
+      },
+      "00": {
+        "trust": -6.0
+      },
+      "other": {}
+    },
+    "质疑": {
+      "ai": {
+        "trust": -5.0,
+        "anger": 4.0
+      },
+      "00": {
+        "trust": -4.0
+      },
+      "other": {}
+    },
+    "失望": {
+      "ai": {
+        "sadness": 9.0,
+        "trust": -5.0
+      },
+      "00": {
+        "sadness": 7.5,
+        "trust": -4.0
+      },
+      "other": {}
+    },
+    "崩溃": {
+      "ai": {
+        "sadness": 12.5,
+        "fear": 10.0,
+        "anger": 7.5
+      },
+      "00": {
+        "sadness": 10.0
+      },
+      "other": {}
+    },
+    "疯": {
+      "ai": {
+        "anger": 10.0,
+        "fear": 7.5,
+        "sadness": 5.0
+      },
+      "00": {
+        "anger": 9.0
+      },
+      "other": {}
+    },
+    "抓狂": {
+      "ai": {
+        "anger": 12.5,
+        "fear": 5.0,
+        "sadness": 2.5
+      },
+      "00": {
+        "anger": 10.0
+      },
+      "other": {}
+    },
+    "无语": {
+      "ai": {
+        "disgust": 6.0,
+        "surprise": 2.5
+      },
+      "00": {
+        "disgust": 5.0
+      },
+      "other": {}
+    },
+    "腻": {
+      "ai": {
+        "disgust": 7.5,
+        "anger": 2.5
+      },
+      "00": {
+        "disgust": 6.0
+      },
+      "other": {}
+    },
+    "腻歪": {
+      "ai": {
+        "joy": 10.0,
+        "trust": 7.5
+      },
+      "00": {
+        "joy": 9.0,
+        "trust": 6.0
+      },
+      "other": {}
+    },
+    "甜": {
+      "ai": {
+        "joy": 7.5,
+        "trust": 5.0
+      },
+      "00": {
+        "joy": 6.0,
+        "trust": 4.0
+      },
+      "other": {}
+    },
+    "甜蜜": {
+      "ai": {
+        "joy": 10.0,
+        "trust": 6.0,
+        "anticipation": 4.0
+      },
+      "00": {
+        "joy": 9.0,
+        "trust": 5.0
+      },
+      "other": {}
+    },
+    "美满": {
+      "ai": {
+        "joy": 9.0,
+        "trust": 6.0
+      },
+      "00": {
+        "joy": 7.5,
+        "trust": 5.0
+      },
+      "other": {}
+    },
+    "浪漫": {
+      "ai": {
+        "joy": 9.0,
+        "anticipation": 6.0,
+        "trust": 4.0
+      },
+      "00": {
+        "joy": 7.5,
+        "anticipation": 5.0
+      },
+      "other": {}
+    },
+    "温馨": {
+      "ai": {
+        "joy": 7.5,
+        "trust": 5.0,
+        "sadness": -2.5
+      },
+      "00": {
+        "joy": 6.0,
+        "trust": 4.0
+      },
+      "other": {}
+    },
+    "圆满": {
+      "ai": {
+        "joy": 9.0,
+        "sadness": -5.0,
+        "trust": 4.0
+      },
+      "00": {
+        "joy": 7.5
+      },
+      "other": {}
+    },
+    "愉快": {
+      "ai": {
+        "joy": 7.5
+      },
+      "00": {
+        "joy": 6.0
+      },
+      "other": {}
+    },
+    "快活": {
+      "ai": {
+        "joy": 7.5
+      },
+      "00": {
+        "joy": 6.0
+      },
+      "other": {}
+    },
+    "甜美": {
+      "ai": {
+        "joy": 9.0,
+        "trust": 5.0
+      },
+      "00": {
+        "joy": 7.5,
+        "trust": 4.0
+      },
+      "other": {}
+    },
+    "舒适": {
+      "ai": {
+        "joy": 6.0
+      },
+      "00": {
+        "joy": 5.0
+      },
+      "other": {}
+    },
+    "舒畅": {
+      "ai": {
+        "joy": 7.5
+      },
+      "00": {
+        "joy": 6.0
+      },
+      "other": {}
+    },
+    "爽快": {
+      "ai": {
+        "joy": 7.5
+      },
+      "00": {
+        "joy": 6.0
+      },
+      "other": {}
+    },
+    "安宁": {
+      "ai": {
+        "joy": 6.0,
+        "fear": -4.0
+      },
+      "00": {
+        "joy": 5.0
+      },
+      "other": {}
+    },
+    "平静": {
+      "ai": {
+        "joy": 5.0
+      },
+      "00": {
+        "joy": 4.0
+      },
+      "other": {}
+    },
+    "宁静": {
+      "ai": {
+        "joy": 5.0
+      },
+      "00": {
+        "joy": 4.0
+      },
+      "other": {}
+    },
+    "安详": {
+      "ai": {
+        "joy": 5.0,
+        "fear": -2.5
+      },
+      "00": {
+        "joy": 4.0
+      },
+      "other": {}
+    },
+    "乐观": {
+      "ai": {
+        "anticipation": 7.5,
+        "joy": 5.0
+      },
+      "00": {
+        "anticipation": 6.0,
+        "joy": 4.0
+      },
+      "other": {}
+    },
+    "积极": {
+      "ai": {
+        "anticipation": 6.0,
+        "joy": 4.0
+      },
+      "00": {
+        "anticipation": 5.0
+      },
+      "other": {}
+    },
+    "自信": {
+      "ai": {
+        "trust": 7.5,
+        "joy": 5.0
+      },
+      "00": {
+        "trust": 6.0,
+        "joy": 4.0
+      },
+      "other": {}
+    },
+    "自豪": {
+      "ai": {
+        "joy": 9.0,
+        "trust": 5.0
+      },
+      "00": {
+        "joy": 7.5,
+        "trust": 4.0
+      },
+      "other": {}
+    },
+    "感激": {
+      "ai": {
+        "joy": 9.0,
+        "trust": 7.5
+      },
+      "00": {
+        "joy": 7.5,
+        "trust": 6.0
+      },
+      "other": {}
+    },
+    "出色": {
+      "ai": {
+        "joy": 7.5,
+        "trust": 4.0
+      },
+      "00": {
+        "joy": 6.0
+      },
+      "other": {}
+    },
+    "卓越": {
+      "ai": {
+        "joy": 9.0,
+        "trust": 5.0
+      },
+      "00": {
+        "joy": 7.5,
+        "trust": 4.0
+      },
+      "other": {}
+    },
+    "棒极了": {
+      "ai": {
+        "joy": 11.0,
+        "surprise": 5.0
+      },
+      "00": {
+        "joy": 9.0,
+        "surprise": 4.0
+      },
+      "other": {}
+    },
+    "给力": {
+      "ai": {
+        "joy": 9.0,
+        "trust": 4.0
+      },
+      "00": {
+        "joy": 7.5
+      },
+      "other": {}
+    },
+    "无敌": {
+      "ai": {
+        "joy": 11.0,
+        "surprise": 6.0,
+        "anger": 2.5
+      },
+      "00": {
+        "joy": 9.0,
+        "surprise": 5.0
+      },
+      "other": {}
+    },
+    "真棒": {
+      "ai": {
+        "joy": 9.0
+      },
+      "00": {
+        "joy": 7.5
+      },
+      "other": {}
+    },
+    "太棒了": {
+      "ai": {
+        "joy": 10.0
+      },
+      "00": {
+        "joy": 9.0
+      },
+      "other": {}
+    },
+    "痛苦": {
+      "ai": {
+        "sadness": 10.0,
+        "anger": 2.5
+      },
+      "00": {
+        "sadness": 9.0
+      },
+      "other": {}
+    },
+    "抑郁": {
+      "ai": {
+        "sadness": 9.0,
+        "fear": 4.0
+      },
+      "00": {
+        "sadness": 7.5,
+        "fear": 2.5
+      },
+      "other": {}
+    },
+    "悲观": {
+      "ai": {
+        "sadness": 7.5,
+        "anticipation": -5.0
+      },
+      "00": {
+        "sadness": 6.0,
+        "anticipation": -4.0
+      },
+      "other": {}
+    },
+    "消极": {
+      "ai": {
+        "sadness": 6.0,
+        "anticipation": -5.0
+      },
+      "00": {
+        "sadness": 5.0
+      },
+      "other": {}
+    },
+    "窘迫": {
+      "ai": {
+        "fear": 5.0,
+        "disgust": 2.5
+      },
+      "00": {
+        "fear": 4.0
+      },
+      "other": {}
+    },
+    "乏味": {
+      "ai": {
+        "disgust": 5.0,
+        "anticipation": -4.0
+      },
+      "00": {
+        "disgust": 4.0
+      },
+      "other": {}
+    },
+    "烦闷": {
+      "ai": {
+        "sadness": 5.0,
+        "anger": 4.0
+      },
+      "00": {
+        "sadness": 4.0
+      },
+      "other": {}
+    },
+    "气愤": {
+      "ai": {
+        "anger": 9.0
+      },
+      "00": {
+        "anger": 7.5
+      },
+      "other": {}
+    },
+    "暴怒": {
+      "ai": {
+        "anger": 12.5,
+        "fear": 5.0
+      },
+      "00": {
+        "anger": 10.0
+      },
+      "other": {}
+    },
+    "狂怒": {
+      "ai": {
+        "anger": 12.5,
+        "sadness": 4.0
+      },
+      "00": {
+        "anger": 11.0
+      },
+      "other": {}
+    },
+    "厌恶": {
+      "ai": {
+        "disgust": 9.0,
+        "anger": 4.0
+      },
+      "00": {
+        "disgust": 7.5
+      },
+      "other": {}
+    },
+    "反感": {
+      "ai": {
+        "disgust": 7.5
+      },
+      "00": {
+        "disgust": 6.0
+      },
+      "other": {}
+    },
+    "嫌弃": {
+      "ai": {
+        "disgust": 7.5,
+        "sadness": 4.0
+      },
+      "00": {
+        "disgust": 6.0,
+        "sadness": 2.5
+      },
+      "other": {}
+    },
+    "可怕": {
+      "ai": {
+        "fear": 10.0,
+        "disgust": 5.0
+      },
+      "00": {
+        "fear": 9.0
+      },
+      "other": {}
+    },
+    "忧虑": {
+      "ai": {
+        "fear": 7.5,
+        "sadness": 2.5
+      },
+      "00": {
+        "fear": 6.0
+      },
+      "other": {}
+    },
+    "惊慌": {
+      "ai": {
+        "fear": 9.0,
+        "surprise": 5.0
+      },
+      "00": {
+        "fear": 7.5
+      },
+      "other": {}
+    },
+    "慌张": {
+      "ai": {
+        "fear": 7.5,
+        "surprise": 4.0
+      },
+      "00": {
+        "fear": 6.0
+      },
+      "other": {}
+    },
+    "震惊": {
+      "ai": {
+        "surprise": 9.0,
+        "fear": 4.0
+      },
+      "00": {
+        "surprise": 7.5
+      },
+      "other": {}
+    },
+    "吃惊": {
+      "ai": {
+        "surprise": 6.0
+      },
+      "00": {
+        "surprise": 5.0
+      },
+      "other": {}
+    },
+    "诧异": {
+      "ai": {
+        "surprise": 6.0,
+        "disgust": 2.5
+      },
+      "00": {
+        "surprise": 5.0
+      },
+      "other": {}
+    },
+    "奇怪": {
+      "ai": {
+        "surprise": 5.0,
+        "disgust": 2.5
+      },
+      "00": {
+        "surprise": 4.0
+      },
+      "other": {}
+    },
+    "可疑": {
+      "ai": {
+        "fear": 5.0,
+        "disgust": 2.5
+      },
+      "00": {
+        "fear": 4.0
+      },
+      "other": {}
+    },
+    "颓废": {
+      "ai": {
+        "sadness": 7.5,
+        "anticipation": -6.0,
+        "anger": 2.5
+      },
+      "00": {
+        "sadness": 6.0
+      },
+      "other": {}
+    },
+    "堕落": {
+      "ai": {
+        "sadness": 9.0,
+        "disgust": 5.0,
+        "trust": -4.0
+      },
+      "00": {
+        "sadness": 7.5,
+        "disgust": 4.0
+      },
+      "other": {}
+    },
+    "空洞": {
+      "ai": {
+        "sadness": 6.0,
+        "anticipation": -5.0
+      },
+      "00": {
+        "sadness": 5.0
+      },
+      "other": {}
+    },
+    "麻木": {
+      "ai": {
+        "sadness": 5.0,
+        "disgust": 2.5,
+        "fear": -2.5
+      },
+      "00": {
+        "sadness": 4.0
+      },
+      "other": {}
+    },
+    "疲倦": {
+      "ai": {
+        "sadness": 4.0,
+        "energy": -6.0
+      },
+      "00": {
+        "sadness": 2.5
+      },
+      "other": {}
+    },
+    "饱": {
+      "ai": {
+        "joy": 2.5,
+        "disgust": -1.5
+      },
+      "00": {},
+      "other": {}
+    },
+    "困倦": {
+      "ai": {
+        "energy": -7.5
+      },
+      "00": {},
+      "other": {}
+    },
+    "筋疲力尽": {
+      "ai": {
+        "sadness": 6.0,
+        "energy": -10.0
+      },
+      "00": {
+        "sadness": 5.0,
+        "energy": -7.5
+      },
+      "other": {}
+    },
+    "眼红": {
+      "ai": {
+        "anger": 5.0,
+        "sadness": 2.5
+      },
+      "00": {
+        "anger": 4.0,
+        "sadness": 1.5
+      },
+      "other": {}
+    },
+    "酸": {
+      "ai": {
+        "sadness": 4.0,
+        "anger": 2.5
+      },
+      "00": {
+        "sadness": 3.0,
+        "anger": 1.5
+      },
+      "other": {}
+    },
+    "酸酸": {
+      "ai": {
+        "sadness": 6.0,
+        "anger": 3.0
+      },
+      "00": {
+        "sadness": 5.0,
+        "anger": 2.0
+      },
+      "other": {}
+    },
+    "好开心": {
+      "ai": {
+        "joy": 7.5
+      },
+      "00": {
+        "joy": 7.5
+      },
+      "other": {}
+    },
+    "委委屈屈": {
+      "ai": {
+        "sadness": 10.0,
+        "anger": 6.0
+      },
+      "00": {
+        "sadness": 9.0,
+        "anger": 5.0
+      },
+      "other": {}
+    },
+    "怕死了": {
+      "ai": {
+        "fear": 12.0,
+        "sadness": 3.0
+      },
+      "00": {
+        "fear": 10.0,
+        "sadness": 2.5
+      },
+      "other": {}
+    },
+    "慌死了": {
+      "ai": {
+        "fear": 11.0,
+        "surprise": 4.0
+      },
+      "00": {
+        "fear": 9.0,
+        "surprise": 2.5
+      },
+      "other": {}
+    },
+    "恶心得要死": {
+      "ai": {
+        "disgust": 12.0,
+        "anger": 5.0
+      },
+      "00": {
+        "disgust": 10.0,
+        "anger": 4.0
+      },
+      "other": {}
+    },
+    "绷不住": {
+      "ai": {
+        "surprise": 6.0,
+        "joy": 4.0
+      },
+      "00": {
+        "surprise": 5.0,
+        "joy": 3.0
+      },
+      "other": {}
+    },
+    "难绷": {
+      "ai": {
+        "surprise": 6.0,
+        "disgust": 3.0
+      },
+      "00": {
+        "surprise": 5.0,
+        "disgust": 2.5
+      },
+      "other": {}
+    },
+    "emo": {
+      "ai": {
+        "sadness": 9.0,
+        "anticipation": -4.0
+      },
+      "00": {
+        "sadness": 7.5,
+        "anticipation": -3.0
+      },
+      "other": {}
+    },
+    "玉玉": {
+      "ai": {
+        "sadness": 8.0,
+        "energy": -5.0
+      },
+      "00": {
+        "sadness": 7.0,
+        "energy": -4.0
+      },
+      "other": {}
+    },
+    "麻了": {
+      "ai": {
+        "sadness": 4.0,
+        "surprise": 3.0,
+        "fear": -2.0
+      },
+      "00": {
+        "sadness": 3.0,
+        "surprise": 2.5
+      },
+      "other": {}
+    },
+    "蚌埠住了": {
+      "ai": {
+        "joy": 6.0,
+        "surprise": 7.5
+      },
+      "00": {
+        "joy": 5.0,
+        "surprise": 6.0
+      },
+      "other": {}
+    },
+    "炸了": {
+      "ai": {
+        "anger": 7.5,
+        "surprise": 6.0
+      },
+      "00": {
+        "anger": 6.0,
+        "surprise": 5.0
+      },
+      "other": {}
+    },
+    "裂开": {
+      "ai": {
+        "sadness": 7.5,
+        "surprise": 5.0
+      },
+      "00": {
+        "sadness": 6.0,
+        "surprise": 4.0
+      },
+      "other": {}
+    },
+    "我裂开了": {
+      "ai": {},
+      "00": {
+        "sadness": 7.5,
+        "surprise": 5.0
+      },
+      "other": {}
+    },
+    "抽象": {
+      "ai": {
+        "surprise": 5.0,
+        "disgust": 3.0
+      },
+      "00": {
+        "surprise": 4.0,
+        "disgust": 2.5
+      },
+      "other": {}
+    },
+    "逆天": {
+      "ai": {
+        "surprise": 6.0,
+        "disgust": 4.0
+      },
+      "00": {
+        "surprise": 5.0,
+        "disgust": 3.0
+      },
+      "other": {}
+    },
+    "红温": {
+      "ai": {
+        "anger": 9.0
+      },
+      "00": {
+        "anger": 7.5
+      },
+      "other": {}
+    },
+    "急了": {
+      "ai": {
+        "anger": 6.0,
+        "fear": 2.5
+      },
+      "00": {
+        "anger": 5.0,
+        "fear": 1.5
+      },
+      "other": {}
+    },
+    "急急": {
+      "ai": {
+        "fear": 6.0,
+        "anticipation": 2.5
+      },
+      "00": {
+        "fear": 5.0,
+        "anticipation": 1.5
+      },
+      "other": {}
+    },
+    "崩不住了": {
+      "ai": {
+        "surprise": 7.5,
+        "joy": 5.0
+      },
+      "00": {
+        "surprise": 6.0,
+        "joy": 4.0
+      },
+      "other": {}
+    },
+    "破大防": {
+      "ai": {
+        "sadness": 9.0,
+        "anger": 5.0
+      },
+      "00": {
+        "sadness": 7.5,
+        "anger": 4.0
+      },
+      "other": {}
+    },
+    "乖": {
+      "ai": {
+        "joy": 6.0,
+        "trust": 5.0
+      },
+      "00": {
+        "joy": 5.0,
+        "trust": 4.0
+      },
+      "other": {
+        "joy": 2.0
+      }
+    }
+  },
+  "_verb_emotions": {
+    "喜欢": {
+      "ai": {
+        "joy": 5.0,
+        "trust": 5.0
+      },
+      "00": {
+        "joy": 5.0,
+        "trust": 5.0
+      },
+      "other": {}
+    },
+    "爱": {
+      "ai": {
+        "joy": 10.0,
+        "trust": 9.0,
+        "anticipation": 5.0
+      },
+      "00": {
+        "joy": 9.0,
+        "trust": 7.5
+      },
+      "other": {
+        "joy": 5.0
+      }
+    },
+    "讨厌": {
+      "ai": {
+        "sadness": 4.0,
+        "anger": 6.0,
+        "disgust": 4.0
+      },
+      "00": {
+        "sadness": 5.0,
+        "surprise": 5.0,
+        "joy": -2.5
+      },
+      "other": {}
+    },
+    "恨": {
+      "ai": {
+        "anger": 12.5,
+        "sadness": 5.0
+      },
+      "00": {
+        "anger": 10.0,
+        "sadness": 4.0
+      },
+      "other": {
+        "anger": 5.0
+      }
+    },
+    "骂": {
+      "ai": {
+        "anger": 7.5,
+        "disgust": 4.0
+      },
+      "00": {
+        "anger": 6.0
+      },
+      "other": {
+        "anger": 4.0
+      }
+    },
+    "夸": {
+      "ai": {
+        "joy": 7.5,
+        "trust": 6.0
+      },
+      "00": {
+        "joy": 2.5,
+        "trust": 2.5
+      },
+      "other": {}
+    },
+    "表扬": {
+      "ai": {
+        "joy": 7.5,
+        "trust": 6.0
+      },
+      "00": {
+        "joy": 6.0,
+        "trust": 5.0
+      },
+      "other": {
+        "joy": 4.0
+      }
+    },
+    "称赞": {
+      "ai": {
+        "joy": 7.5,
+        "trust": 6.0
+      },
+      "00": {
+        "joy": 6.0,
+        "trust": 5.0
+      },
+      "other": {
+        "joy": 4.0
+      }
+    },
+    "批评": {
+      "ai": {
+        "sadness": 5.0,
+        "anger": 6.0
+      },
+      "00": {
+        "sadness": 4.0,
+        "anger": 5.0
+      },
+      "other": {
+        "sadness": 2.5
+      }
+    },
+    "凶": {
+      "ai": {
+        "sadness": 6.0,
+        "anger": 7.5,
+        "fear": 4.0
+      },
+      "00": {
+        "sadness": 5.0,
+        "anger": 6.0
+      },
+      "other": {
+        "sadness": 2.5
+      }
+    },
+    "吼": {
+      "ai": {
+        "anger": 6.0,
+        "fear": 4.0
+      },
+      "00": {
+        "anger": 5.0,
+        "fear": 2.5
+      },
+      "other": {
+        "anger": 2.5
+      }
+    },
+    "欺负": {
+      "ai": {
+        "anger": 9.0,
+        "sadness": 5.0,
+        "fear": 4.0
+      },
+      "00": {
+        "anger": 7.5,
+        "sadness": 4.0
+      },
+      "other": {
+        "sadness": 2.5
+      }
+    },
+    "嘲笑": {
+      "ai": {
+        "disgust": 6.0,
+        "sadness": 4.0
+      },
+      "00": {
+        "disgust": 5.0,
+        "sadness": 2.5
+      },
+      "other": {}
+    },
+    "嫌弃": {
+      "ai": {
+        "disgust": 7.5,
+        "sadness": 4.0,
+        "trust": -4.0
+      },
+      "00": {
+        "disgust": 6.0,
+        "sadness": 2.5
+      },
+      "other": {}
+    },
+    "冷落": {
+      "ai": {
+        "sadness": 7.5,
+        "fear": 4.0,
+        "trust": -5.0
+      },
+      "00": {
+        "sadness": 6.0,
+        "trust": -4.0
+      },
+      "other": {}
+    },
+    "抛弃": {
+      "ai": {
+        "sadness": 10.0,
+        "fear": 7.5,
+        "anger": 5.0,
+        "trust": -7.5
+      },
+      "00": {
+        "sadness": 9.0,
+        "fear": 6.0,
+        "trust": -6.0
+      },
+      "other": {}
+    },
+    "背叛": {
+      "ai": {
+        "sadness": 11.0,
+        "anger": 9.0,
+        "trust": -9.0
+      },
+      "00": {
+        "sadness": 9.0,
+        "anger": 7.5,
+        "trust": -7.5
+      },
+      "other": {}
+    },
+    "欺骗": {
+      "ai": {
+        "sadness": 9.0,
+        "anger": 7.5,
+        "trust": -7.5
+      },
+      "00": {
+        "sadness": 7.5,
+        "anger": 6.0,
+        "trust": -6.0
+      },
+      "other": {}
+    },
+    "敷衍": {
+      "ai": {
+        "disgust": 6.0,
+        "trust": -5.0
+      },
+      "00": {
+        "disgust": 5.0,
+        "trust": -4.0
+      },
+      "other": {}
+    },
+    "无视": {
+      "ai": {
+        "disgust": 6.0,
+        "sadness": 4.0
+      },
+      "00": {
+        "disgust": 5.0,
+        "sadness": 2.5
+      },
+      "other": {}
+    },
+    "误解": {
+      "ai": {
+        "sadness": 6.0,
+        "anger": 4.0,
+        "trust": -2.5
+      },
+      "00": {
+        "sadness": 5.0,
+        "anger": 2.5
+      },
+      "other": {}
+    },
+    "错过": {
+      "ai": {
+        "sadness": 7.5,
+        "anticipation": -5.0
+      },
+      "00": {
+        "sadness": 6.0,
+        "anticipation": -4.0
+      },
+      "other": {}
+    },
+    "失去": {
+      "ai": {
+        "sadness": 10.0,
+        "fear": 5.0,
+        "trust": -2.5
+      },
+      "00": {
+        "sadness": 9.0,
+        "fear": 4.0
+      },
+      "other": {}
+    },
+    "得到": {
+      "ai": {
+        "joy": 9.0,
+        "anticipation": 4.0,
+        "trust": 2.5
+      },
+      "00": {
+        "joy": 7.5,
+        "anticipation": 2.5
+      },
+      "other": {}
+    },
+    "获得": {
+      "ai": {
+        "joy": 7.5,
+        "anticipation": 4.0,
+        "trust": 2.5
+      },
+      "00": {
+        "joy": 6.0,
+        "anticipation": 2.5
+      },
+      "other": {}
+    },
+    "赢": {
+      "ai": {
+        "joy": 11.0,
+        "surprise": 5.0,
+        "trust": 4.0
+      },
+      "00": {
+        "joy": 9.0,
+        "surprise": 4.0
+      },
+      "other": {}
+    },
+    "成功": {
+      "ai": {
+        "joy": 11.0,
+        "anticipation": 6.0,
+        "trust": 5.0
+      },
+      "00": {
+        "joy": 9.0,
+        "anticipation": 5.0
+      },
+      "other": {}
+    },
+    "失败": {
+      "ai": {
+        "sadness": 9.0,
+        "anger": 5.0,
+        "fear": 4.0
+      },
+      "00": {
+        "sadness": 7.5,
+        "anger": 4.0
+      },
+      "other": {}
+    },
+    "输": {
+      "ai": {
+        "sadness": 9.0,
+        "anger": 6.0
+      },
+      "00": {
+        "sadness": 7.5,
+        "anger": 5.0
+      },
+      "other": {}
+    },
+    "通过": {
+      "ai": {
+        "joy": 9.0,
+        "anticipation": 5.0,
+        "trust": 4.0
+      },
+      "00": {
+        "joy": 7.5,
+        "anticipation": 4.0
+      },
+      "other": {}
+    },
+    "及格": {
+      "ai": {
+        "joy": 6.0
+      },
+      "00": {
+        "joy": 5.0
+      },
+      "other": {}
+    },
+    "升学": {
+      "ai": {
+        "joy": 10.0,
+        "anticipation": 7.5,
+        "trust": 5.0
+      },
+      "00": {
+        "joy": 9.0,
+        "anticipation": 6.0
+      },
+      "other": {}
+    },
+    "毕业": {
+      "ai": {
+        "joy": 11.0,
+        "sadness": 7.5,
+        "anticipation": 6.0
+      },
+      "00": {
+        "joy": 10.0,
+        "sadness": 6.0,
+        "anticipation": 5.0
+      },
+      "other": {}
+    },
+    "上线": {
+      "ai": {
+        "joy": 9.0,
+        "anticipation": 7.5,
+        "trust": 4.0
+      },
+      "00": {
+        "joy": 7.5,
+        "anticipation": 6.0
+      },
+      "other": {}
+    },
+    "发布": {
+      "ai": {
+        "joy": 9.0,
+        "anticipation": 6.0,
+        "trust": 5.0
+      },
+      "00": {
+        "joy": 7.5,
+        "anticipation": 5.0
+      },
+      "other": {}
+    },
+    "开工": {
+      "ai": {
+        "anticipation": 6.0,
+        "joy": 4.0
+      },
+      "00": {
+        "anticipation": 5.0
+      },
+      "other": {}
+    },
+    "完工": {
+      "ai": {
+        "joy": 7.5,
+        "relief": 6.0
+      },
+      "00": {
+        "joy": 6.0,
+        "relief": 5.0
+      },
+      "other": {}
+    },
+    "解决": {
+      "ai": {
+        "joy": 9.0,
+        "relief": 7.5,
+        "anticipation": 2.5
+      },
+      "00": {
+        "joy": 7.5,
+        "relief": 6.0
+      },
+      "other": {}
+    },
+    "搞定": {
+      "ai": {
+        "joy": 9.0,
+        "relief": 7.5
+      },
+      "00": {
+        "joy": 7.5,
+        "relief": 6.0
+      },
+      "other": {}
+    },
+    "治愈": {
+      "ai": {
+        "joy": 10.0,
+        "sadness": -7.5,
+        "fear": -5.0,
+        "trust": 4.0
+      },
+      "00": {
+        "joy": 9.0,
+        "sadness": -6.0,
+        "fear": -4.0
+      },
+      "other": {}
+    },
+    "安慰": {
+      "ai": {
+        "joy": 5.0,
+        "sadness": -4.0,
+        "trust": 4.0
+      },
+      "00": {
+        "joy": 4.0,
+        "sadness": -2.5
+      },
+      "other": {}
+    },
+    "心疼": {
+      "ai": {
+        "sadness": 7.5,
+        "joy": -2.5
+      },
+      "00": {
+        "sadness": 6.0
+      },
+      "other": {}
+    },
+    "担心": {
+      "ai": {
+        "fear": 7.5,
+        "sadness": 2.5
+      },
+      "00": {
+        "fear": 6.0
+      },
+      "other": {}
+    },
+    "操心": {
+      "ai": {
+        "fear": 6.0,
+        "sadness": 4.0
+      },
+      "00": {
+        "fear": 5.0,
+        "sadness": 2.5
+      },
+      "other": {}
+    },
+    "想念": {
+      "ai": {
+        "sadness": 6.0,
+        "anticipation": 5.0,
+        "trust": 2.5
+      },
+      "00": {
+        "sadness": 5.0,
+        "anticipation": 4.0
+      },
+      "other": {}
+    },
+    "思念": {
+      "ai": {
+        "sadness": 6.0,
+        "anticipation": 5.0
+      },
+      "00": {
+        "sadness": 5.0,
+        "anticipation": 4.0
+      },
+      "other": {}
+    },
+    "牵挂": {
+      "ai": {
+        "fear": 5.0,
+        "sadness": 4.0,
+        "anticipation": 2.5
+      },
+      "00": {
+        "fear": 4.0,
+        "sadness": 2.5
+      },
+      "other": {}
+    },
+    "在乎": {
+      "ai": {
+        "trust": 6.0,
+        "fear": 4.0,
+        "anticipation": 2.5
+      },
+      "00": {
+        "trust": 5.0
+      },
+      "other": {}
+    },
+    "重视": {
+      "ai": {
+        "trust": 7.5,
+        "joy": 4.0
+      },
+      "00": {
+        "trust": 6.0
+      },
+      "other": {}
+    },
+    "忽略": {
+      "ai": {
+        "sadness": 6.0,
+        "anger": 4.0,
+        "trust": -4.0
+      },
+      "00": {
+        "sadness": 5.0,
+        "anger": 2.5
+      },
+      "other": {}
+    },
+    "忽视": {
+      "ai": {
+        "disgust": 6.0,
+        "sadness": 4.0,
+        "trust": -2.5
+      },
+      "00": {
+        "disgust": 5.0,
+        "sadness": 2.5
+      },
+      "other": {}
+    },
+    "记得": {
+      "ai": {
+        "trust": 5.0,
+        "joy": 2.5
+      },
+      "00": {
+        "trust": 4.0
+      },
+      "other": {}
+    },
+    "忘记": {
+      "ai": {
+        "sadness": 4.0,
+        "trust": -5.0
+      },
+      "00": {
+        "sadness": 2.5,
+        "trust": -4.0
+      },
+      "other": {}
+    },
+    "记住": {
+      "ai": {
+        "trust": 5.0
+      },
+      "00": {
+        "trust": 4.0
+      },
+      "other": {}
+    },
+    "原谅": {
+      "ai": {
+        "joy": 7.5,
+        "sadness": -5.0,
+        "trust": 7.5
+      },
+      "00": {
+        "joy": 6.0,
+        "sadness": -4.0,
+        "trust": 6.0
+      },
+      "other": {}
+    },
+    "道歉": {
+      "ai": {
+        "sadness": 4.0,
+        "trust": 5.0
+      },
+      "00": {
+        "sadness": 2.5,
+        "trust": 4.0
+      },
+      "other": {}
+    },
+    "感谢": {
+      "ai": {
+        "joy": 5.0,
+        "trust": 4.0
+      }
+    },
+    "感激": {
+      "ai": {
+        "joy": 9.0,
+        "trust": 9.0,
+        "sadness": -4.0
+      },
+      "00": {
+        "joy": 7.5,
+        "trust": 7.5
+      },
+      "other": {
+        "joy": 5.0,
+        "trust": 5.0
+      }
+    },
+    "尊敬": {
+      "ai": {
+        "trust": 9.0,
+        "joy": 5.0
+      },
+      "00": {
+        "trust": 7.5
+      },
+      "other": {}
+    },
+    "尊重": {
+      "ai": {
+        "trust": 7.5,
+        "joy": 4.0
+      },
+      "00": {
+        "trust": 6.0
+      },
+      "other": {}
+    },
+    "信任": {
+      "ai": {
+        "trust": 10.0
+      },
+      "00": {
+        "trust": 9.0
+      },
+      "other": {}
+    },
+    "怀疑": {
+      "ai": {
+        "trust": -9.0,
+        "fear": 6.0,
+        "anger": 4.0
+      },
+      "00": {
+        "trust": -7.5,
+        "fear": 5.0,
+        "anger": 2.5
+      },
+      "other": {}
+    },
+    "质疑": {
+      "ai": {
+        "trust": -6.0,
+        "anger": 5.0
+      },
+      "00": {
+        "trust": -5.0,
+        "anger": 4.0
+      },
+      "other": {}
+    },
+    "理解": {
+      "ai": {
+        "trust": 6.0,
+        "joy": 4.0,
+        "sadness": -2.5
+      },
+      "00": {
+        "trust": 5.0,
+        "joy": 2.5
+      },
+      "other": {}
+    },
+    "误会": {
+      "ai": {
+        "sadness": 6.0,
+        "anger": 4.0
+      },
+      "00": {
+        "sadness": 5.0,
+        "anger": 2.5
+      },
+      "other": {}
+    },
+    "支持": {
+      "ai": {
+        "trust": 7.5,
+        "joy": 6.0,
+        "anticipation": 4.0
+      },
+      "00": {
+        "trust": 6.0,
+        "joy": 5.0
+      },
+      "other": {}
+    },
+    "鼓励": {
+      "ai": {
+        "joy": 7.5,
+        "anticipation": 6.0,
+        "trust": 5.0
+      },
+      "00": {
+        "joy": 6.0,
+        "anticipation": 5.0,
+        "trust": 4.0
+      },
+      "other": {}
+    },
+    "帮助": {
+      "ai": {
+        "joy": 7.5,
+        "trust": 6.0,
+        "sadness": -2.5
+      },
+      "00": {
+        "joy": 6.0,
+        "trust": 5.0
+      },
+      "other": {
+        "joy": 4.0,
+        "trust": 4.0
+      }
+    },
+    "帮忙": {
+      "ai": {
+        "joy": 6.0,
+        "trust": 5.0
+      },
+      "00": {
+        "joy": 5.0,
+        "trust": 4.0
+      },
+      "other": {
+        "joy": 2.5
+      }
+    },
+    "救": {
+      "ai": {
+        "joy": 10.0,
+        "fear": -7.5,
+        "sadness": -5.0,
+        "trust": 7.5
+      },
+      "00": {
+        "joy": 9.0,
+        "fear": -6.0,
+        "sadness": -4.0,
+        "trust": 6.0
+      },
+      "other": {}
+    },
+    "杀": {
+      "ai": {
+        "anger": 10.0,
+        "sadness": 7.5,
+        "fear": 5.0
+      },
+      "00": {
+        "anger": 9.0,
+        "sadness": 6.0
+      },
+      "other": {
+        "anger": 5.0,
+        "sadness": 4.0
+      }
+    },
+    "死": {
+      "ai": {
+        "fear": 12.5,
+        "sadness": 10.0,
+        "anger": 5.0
+      },
+      "00": {
+        "fear": 10.0,
+        "sadness": 9.0
+      },
+      "other": {
+        "sadness": 7.5,
+        "fear": 5.0
+      }
+    },
+    "生病": {
+      "ai": {
+        "fear": 9.0,
+        "sadness": 7.5,
+        "disgust": 4.0
+      },
+      "00": {
+        "fear": 7.5,
+        "sadness": 6.0
+      },
+      "other": {}
+    },
+    "受伤": {
+      "ai": {
+        "sadness": 9.0,
+        "fear": 6.0,
+        "anger": 2.5
+      },
+      "00": {
+        "sadness": 7.5,
+        "fear": 5.0
+      },
+      "other": {}
+    },
+    "开车": {
+      "ai": {
+        "anticipation": 5.0,
+        "joy": 2.5
+      },
+      "00": {
+        "anticipation": 4.0
+      },
+      "other": {}
+    },
+    "睡觉": {
+      "ai": {
+        "joy": 4.0,
+        "energy": 7.5
+      },
+      "00": {
+        "joy": 2.5,
+        "energy": 6.0
+      },
+      "other": {}
+    },
+    "休息": {
+      "ai": {
+        "joy": 5.0,
+        "sadness": -4.0,
+        "energy": 6.0
+      },
+      "00": {
+        "joy": 4.0,
+        "energy": 5.0
+      },
+      "other": {}
+    },
+    "吃饭": {
+      "ai": {
+        "joy": 4.0,
+        "disgust": -2.5,
+        "energy": 4.0
+      },
+      "00": {
+        "joy": 2.5,
+        "energy": 2.5
+      },
+      "other": {}
+    },
+    "喝水": {
+      "ai": {
+        "joy": 2.5,
+        "disgust": -1.5
+      },
+      "00": {
+        "joy": 1.5
+      },
+      "other": {}
+    },
+    "洗澡": {
+      "ai": {
+        "joy": 4.0,
+        "disgust": -4.0,
+        "sadness": -2.5
+      },
+      "00": {
+        "joy": 2.5,
+        "disgust": -2.5
+      },
+      "other": {}
+    },
+    "运动": {
+      "ai": {
+        "joy": 6.0,
+        "energy": 5.0,
+        "anticipation": 2.5
+      },
+      "00": {
+        "joy": 5.0,
+        "energy": 4.0
+      },
+      "other": {}
+    },
+    "跑步": {
+      "ai": {
+        "joy": 5.0,
+        "energy": 4.0,
+        "sadness": -2.5
+      },
+      "00": {
+        "joy": 4.0,
+        "energy": 2.5
+      },
+      "other": {}
+    },
+    "散步": {
+      "ai": {
+        "joy": 4.0,
+        "sadness": -4.0,
+        "fear": -2.5
+      },
+      "00": {
+        "joy": 2.5,
+        "sadness": -2.5
+      },
+      "other": {}
+    },
+    "旅游": {
+      "ai": {
+        "joy": 11.0,
+        "anticipation": 10.0,
+        "sadness": -4.0
+      },
+      "00": {
+        "joy": 10.0,
+        "anticipation": 9.0
+      },
+      "other": {}
+    },
+    "旅行": {
+      "ai": {
+        "joy": 11.0,
+        "anticipation": 10.0,
+        "sadness": -4.0
+      },
+      "00": {
+        "joy": 10.0,
+        "anticipation": 9.0
+      },
+      "other": {}
+    },
+    "游戏": {
+      "ai": {
+        "joy": 9.0,
+        "anticipation": 7.5
+      },
+      "00": {
+        "joy": 7.5,
+        "anticipation": 6.0
+      },
+      "other": {}
+    },
+    "玩": {
+      "ai": {
+        "joy": 7.5,
+        "anticipation": 6.0
+      },
+      "00": {
+        "joy": 6.0,
+        "anticipation": 5.0
+      },
+      "other": {}
+    },
+    "工作": {
+      "ai": {
+        "sadness": 2.5
+      },
+      "00": {
+        "sadness": 1.5
+      },
+      "other": {}
+    },
+    "加班": {
+      "ai": {
+        "sadness": 6.0,
+        "anger": 4.0,
+        "energy": -6.0
+      },
+      "00": {
+        "sadness": 5.0,
+        "anger": 3.0,
+        "energy": -5.0
+      },
+      "other": {}
+    },
+    "学习": {
+      "ai": {
+        "anticipation": 4.0,
+        "sadness": 1.5
+      },
+      "00": {
+        "anticipation": 2.5
+      },
+      "other": {}
+    },
+    "考试": {
+      "ai": {
+        "fear": 6.0,
+        "anticipation": 4.0,
+        "sadness": 2.5
+      },
+      "00": {
+        "fear": 5.0,
+        "anticipation": 3.0
+      },
+      "other": {}
+    },
+    "面试": {
+      "ai": {
+        "fear": 7.5,
+        "anticipation": 5.0,
+        "sadness": 2.5
+      },
+      "00": {
+        "fear": 6.0,
+        "anticipation": 4.0
+      },
+      "other": {}
+    },
+    "便秘": {
+      "ai": {
+        "sadness": 5.0,
+        "disgust": 7.5,
+        "anger": 4.0
+      },
+      "00": {
+        "sadness": 4.0,
+        "disgust": 6.0,
+        "anger": 2.5
+      },
+      "other": {}
+    },
+    "拉肚子": {
+      "ai": {
+        "sadness": 6.0,
+        "disgust": 7.5,
+        "fear": 4.0
+      },
+      "00": {
+        "sadness": 5.0,
+        "disgust": 6.0,
+        "fear": 2.5
+      },
+      "other": {}
+    },
+    "肚子疼": {
+      "ai": {
+        "sadness": 6.0,
+        "disgust": 7.5,
+        "fear": 4.0
+      },
+      "00": {
+        "sadness": 5.0,
+        "disgust": 6.0,
+        "fear": 2.5
+      },
+      "other": {}
+    },
+    "腹泻": {
+      "ai": {
+        "sadness": 6.0,
+        "disgust": 7.5,
+        "fear": 4.0
+      },
+      "00": {
+        "sadness": 5.0,
+        "disgust": 6.0,
+        "fear": 2.5
+      },
+      "other": {}
+    },
+    "贴贴": {
+      "ai": {
+        "joy": 10.0,
+        "trust": 7.5,
+        "anticipation": 4.0
+      },
+      "00": {
+        "joy": 9.0,
+        "trust": 6.0,
+        "anticipation": 4.0
+      },
+      "other": {}
+    },
+    "抱抱": {
+      "ai": {
+        "joy": 9.0,
+        "trust": 7.5,
+        "sadness": -4.0
+      },
+      "00": {
+        "joy": 7.5,
+        "trust": 6.0,
+        "sadness": -2.5
+      },
+      "other": {}
+    },
+    "蹭蹭": {
+      "ai": {
+        "joy": 7.5,
+        "trust": 6.0,
+        "anticipation": 4.0
+      },
+      "00": {
+        "joy": 6.0,
+        "trust": 5.0
+      },
+      "other": {}
+    },
+    "摸摸": {
+      "ai": {
+        "joy": 7.5,
+        "sadness": -4.0,
+        "trust": 5.0
+      },
+      "00": {
+        "joy": 6.0,
+        "sadness": -2.5,
+        "trust": 4.0
+      },
+      "other": {}
+    },
+    "亲亲": {
+      "ai": {
+        "joy": 10.0,
+        "surprise": 5.0,
+        "trust": 7.5
+      },
+      "00": {
+        "joy": 9.0,
+        "surprise": 4.0,
+        "trust": 6.0
+      },
+      "other": {}
+    },
+    "接吻": {
+      "ai": {
+        "joy": 11.0,
+        "surprise": 7.5,
+        "trust": 9.0,
+        "anticipation": 6.0
+      },
+      "00": {
+        "joy": 10.0,
+        "surprise": 6.0,
+        "trust": 7.5,
+        "anticipation": 5.0
+      },
+      "other": {}
+    },
+    "哔哩哔哩": {
+      "ai": {
+        "joy": 12.5,
+        "surprise": 9.0,
+        "trust": 10.0,
+        "anticipation": 7.5
+      },
+      "00": {
+        "joy": 11.0,
+        "surprise": 7.5,
+        "trust": 9.0,
+        "anticipation": 6.0
+      },
+      "other": {}
+    },
+    "做爱": {
+      "ai": {
+        "joy": 15.0,
+        "surprise": 10.0,
+        "trust": 12.5,
+        "anticipation": 9.0
+      },
+      "00": {
+        "joy": 14.0,
+        "surprise": 9.0,
+        "trust": 11.0,
+        "anticipation": 7.5
+      },
+      "other": {}
+    },
+    "色色": {
+      "ai": {
+        "joy": 12.5,
+        "surprise": 7.5,
+        "trust": 9.0,
+        "anticipation": 10.0
+      },
+      "00": {
+        "joy": 11.0,
+        "surprise": 6.0,
+        "trust": 7.5,
+        "anticipation": 9.0
+      },
+      "other": {}
+    },
+    "吸奶": {
+      "ai": {
+        "joy": 12.5,
+        "surprise": 7.5,
+        "trust": 9.0,
+        "anticipation": 7.5
+      },
+      "00": {
+        "joy": 11.0,
+        "surprise": 6.0,
+        "trust": 7.5,
+        "anticipation": 6.0
+      },
+      "other": {}
+    },
+    "口交": {
+      "ai": {
+        "joy": 12.5,
+        "surprise": 7.5,
+        "trust": 9.0,
+        "anticipation": 7.5
+      },
+      "00": {
+        "joy": 11.0,
+        "surprise": 6.0,
+        "trust": 7.5,
+        "anticipation": 6.0
+      },
+      "other": {}
+    },
+    "爱爱": {
+      "ai": {
+        "joy": 14.0,
+        "surprise": 9.0,
+        "trust": 11.0,
+        "anticipation": 9.0
+      },
+      "00": {
+        "joy": 12.5,
+        "surprise": 7.5,
+        "trust": 10.0,
+        "anticipation": 7.5
+      },
+      "other": {}
+    },
+    "烦死了": {
+      "ai": {
+        "anger": 10.0,
+        "sadness": 4.0
+      },
+      "00": {
+        "anger": 8.0,
+        "sadness": 3.0
+      },
+      "other": {}
+    },
+    "气死了": {
+      "ai": {
+        "anger": 11.0,
+        "sadness": 4.0
+      },
+      "00": {
+        "anger": 9.0,
+        "sadness": 3.0
+      },
+      "other": {}
+    },
+    "回家": {
+      "ai": {
+        "joy": 6.0,
+        "sadness": -4.0,
+        "fear": -5.0,
+        "trust": 4.0
+      },
+      "00": {
+        "joy": 5.0,
+        "sadness": -2.5,
+        "fear": -4.0
+      },
+      "other": {}
+    },
+    "出门": {
+      "ai": {
+        "anticipation": 6.0,
+        "fear": 4.0
+      },
+      "00": {
+        "anticipation": 5.0,
+        "fear": 2.5
+      },
+      "other": {}
+    },
+    "起床": {
+      "ai": {
+        "sadness": 2.5,
+        "anticipation": 4.0
+      },
+      "00": {
+        "sadness": 1.5,
+        "anticipation": 2.5
+      },
+      "other": {}
+    },
+    "迟到": {
+      "ai": {
+        "sadness": 6.0,
+        "fear": 6.0,
+        "anger": 4.0
+      },
+      "00": {
+        "sadness": 5.0,
+        "fear": 5.0,
+        "anger": 2.5
+      },
+      "other": {}
+    },
+    "放假": {
+      "ai": {
+        "joy": 11.0,
+        "anticipation": 9.0,
+        "sadness": -5.0
+      },
+      "00": {
+        "joy": 10.0,
+        "anticipation": 7.5,
+        "sadness": -4.0
+      },
+      "other": {}
+    },
+    "开学": {
+      "ai": {
+        "sadness": 6.0,
+        "anticipation": 4.0,
+        "fear": 2.5
+      },
+      "00": {
+        "sadness": 5.0,
+        "anticipation": 2.5
+      },
+      "other": {}
+    },
+    "退休": {
+      "ai": {
+        "joy": 9.0,
+        "sadness": 5.0,
+        "anticipation": 4.0
+      },
+      "00": {
+        "joy": 7.5,
+        "sadness": 4.0
+      },
+      "other": {}
+    },
+    "结婚": {
+      "ai": {
+        "joy": 12.5,
+        "surprise": 7.5,
+        "trust": 10.0,
+        "anticipation": 7.5
+      },
+      "00": {
+        "joy": 11.0,
+        "surprise": 6.0,
+        "trust": 9.0,
+        "anticipation": 6.0
+      },
+      "other": {}
+    },
+    "离婚": {
+      "ai": {
+        "sadness": 12.5,
+        "anger": 9.0,
+        "fear": 6.0,
+        "trust": -7.5
+      },
+      "00": {
+        "sadness": 11.0,
+        "anger": 7.5,
+        "fear": 5.0,
+        "trust": -6.0
+      },
+      "other": {}
+    },
+    "分手": {
+      "ai": {
+        "sadness": 12.5,
+        "anger": 9.0,
+        "fear": 7.5,
+        "trust": -9.0
+      },
+      "00": {
+        "sadness": 11.0,
+        "anger": 7.5,
+        "fear": 6.0,
+        "trust": -7.5
+      },
+      "other": {}
+    },
+    "失恋": {
+      "ai": {
+        "sadness": 12.5,
+        "anger": 7.5,
+        "fear": 5.0,
+        "trust": -7.5
+      },
+      "00": {
+        "sadness": 11.0,
+        "anger": 6.0,
+        "trust": -6.0
+      },
+      "other": {}
+    },
+    "吵架": {
+      "ai": {
+        "anger": 11.0,
+        "sadness": 6.0,
+        "fear": 4.0
+      },
+      "00": {
+        "anger": 9.0,
+        "sadness": 5.0,
+        "fear": 2.5
+      },
+      "other": {
+        "anger": 5.0,
+        "sadness": 2.5
+      }
+    },
+    "和好": {
+      "ai": {
+        "joy": 9.0,
+        "sadness": -6.0,
+        "trust": 9.0,
+        "anger": -7.5
+      },
+      "00": {
+        "joy": 7.5,
+        "sadness": -5.0,
+        "trust": 7.5,
+        "anger": -6.0
+      },
+      "other": {}
+    },
+    "表白": {
+      "ai": {
+        "joy": 10.0,
+        "surprise": 7.5,
+        "anticipation": 9.0,
+        "trust": 5.0
+      },
+      "00": {
+        "joy": 9.0,
+        "surprise": 6.0,
+        "anticipation": 7.5,
+        "trust": 4.0
+      },
+      "other": {}
+    },
+    "拒绝": {
+      "ai": {
+        "sadness": 9.0,
+        "anger": 7.5,
+        "trust": -5.0
+      },
+      "00": {
+        "sadness": 7.5,
+        "anger": 6.0,
+        "trust": -4.0
+      },
+      "other": {
+        "sadness": 4.0,
+        "anger": 2.5
+      }
+    },
+    "同意": {
+      "ai": {
+        "joy": 6.0,
+        "trust": 7.5
+      },
+      "00": {
+        "joy": 5.0,
+        "trust": 6.0
+      },
+      "other": {
+        "joy": 2.5,
+        "trust": 4.0
+      }
+    },
+    "批准": {
+      "ai": {
+        "joy": 7.5,
+        "trust": 6.0,
+        "anticipation": 4.0
+      },
+      "00": {
+        "joy": 6.0,
+        "trust": 5.0,
+        "anticipation": 2.5
+      },
+      "other": {}
+    },
+    "否决": {
+      "ai": {
+        "sadness": 6.0,
+        "anger": 5.0,
+        "trust": -4.0
+      },
+      "00": {
+        "sadness": 5.0,
+        "anger": 4.0,
+        "trust": -2.5
+      },
+      "other": {}
+    },
+    "答应": {
+      "ai": {
+        "joy": 7.5,
+        "trust": 6.0,
+        "anticipation": 4.0
+      },
+      "00": {
+        "joy": 6.0,
+        "trust": 5.0,
+        "anticipation": 2.5
+      },
+      "other": {
+        "joy": 2.5,
+        "trust": 2.5
+      }
+    },
+    "冤枉": {
+      "ai": {
+        "sadness": 9.0,
+        "anger": 7.5,
+        "trust": -5.0
+      },
+      "00": {
+        "sadness": 7.5,
+        "anger": 6.0,
+        "trust": -4.0
+      },
+      "other": {}
+    },
+    "委屈": {
+      "ai": {
+        "sadness": 9.0,
+        "anger": 6.0,
+        "trust": -2.5
+      },
+      "00": {
+        "sadness": 7.5,
+        "anger": 5.0
+      },
+      "other": {}
+    },
+    "害羞": {
+      "ai": {
+        "surprise": 5.0,
+        "sadness": 2.5,
+        "joy": 4.0
+      },
+      "00": {
+        "surprise": 4.0,
+        "sadness": 1.5,
+        "joy": 2.5
+      },
+      "other": {}
+    },
+    "脸红": {
+      "ai": {
+        "surprise": 4.0,
+        "joy": 2.5
+      },
+      "00": {
+        "surprise": 2.5,
+        "joy": 1.5
+      },
+      "other": {}
+    },
+    "心动": {
+      "ai": {
+        "joy": 9.0,
+        "surprise": 6.0,
+        "anticipation": 7.5,
+        "trust": 4.0
+      },
+      "00": {
+        "joy": 7.5,
+        "surprise": 5.0,
+        "anticipation": 6.0
+      },
+      "other": {}
+    },
+    "心跳": {
+      "ai": {
+        "surprise": 6.0,
+        "anticipation": 5.0,
+        "joy": 4.0
+      },
+      "00": {
+        "surprise": 5.0,
+        "anticipation": 4.0
+      },
+      "other": {}
+    },
+    "吃醋": {
+      "ai": {
+        "anger": 7.5,
+        "sadness": 5.0,
+        "disgust": 2.5
+      },
+      "00": {
+        "anger": 6.0,
+        "sadness": 4.0
+      },
+      "other": {}
+    },
+    "嫉妒": {
+      "ai": {
+        "anger": 7.5,
+        "sadness": 5.0,
+        "disgust": 2.5
+      },
+      "00": {
+        "anger": 6.0,
+        "sadness": 4.0
+      },
+      "other": {}
+    },
+    "羡慕": {
+      "ai": {
+        "sadness": 4.0,
+        "anticipation": 7.5,
+        "joy": 2.5
+      },
+      "00": {
+        "sadness": 2.5,
+        "anticipation": 6.0,
+        "joy": 1.5
+      },
+      "other": {}
+    },
+    "眼红": {
+      "ai": {
+        "anger": 5.0,
+        "sadness": 2.5,
+        "disgust": 2.5
+      },
+      "00": {
+        "anger": 4.0,
+        "sadness": 1.5
+      },
+      "other": {}
+    },
+    "打压": {
+      "ai": {
+        "anger": 7.5,
+        "sadness": 4.0
+      },
+      "00": {
+        "anger": 6.0,
+        "sadness": 2.5
+      },
+      "other": {
+        "anger": 4.0
+      }
+    },
+    "开除": {
+      "ai": {
+        "joy": 2.5,
+        "sadness": 2.5
+      },
+      "00": {
+        "joy": 7.5,
+        "sadness": -2.5
+      },
+      "other": {
+        "sadness": 4.0,
+        "anger": 6.0
+      }
+    },
+    "裁员": {
+      "ai": {
+        "sadness": 5.0
+      },
+      "00": {
+        "sadness": 4.0
+      },
+      "other": {
+        "sadness": 6.0
+      }
+    },
+    "夸奖": {
+      "ai": {
+        "joy": 7.5,
+        "trust": 6.0
+      },
+      "00": {
+        "joy": 6.0,
+        "trust": 5.0
+      },
+      "other": {
+        "joy": 4.0
+      }
+    },
+    "打架": {
+      "ai": {
+        "anger": 10.0,
+        "fear": 5.0
+      },
+      "00": {
+        "anger": 9.0,
+        "fear": 4.0
+      },
+      "other": {
+        "anger": 7.5
+      }
+    },
+    "拥抱": {
+      "ai": {
+        "joy": 9.0,
+        "trust": 7.5,
+        "sadness": -5.0
+      },
+      "00": {
+        "joy": 7.5,
+        "trust": 6.0,
+        "sadness": -4.0
+      },
+      "other": {}
+    },
+    "握手": {
+      "ai": {
+        "trust": 5.0,
+        "joy": 4.0
+      },
+      "00": {
+        "trust": 4.0,
+        "joy": 2.5
+      },
+      "other": {}
+    },
+    "头疼": {
+      "ai": {
+        "sadness": 6.0,
+        "disgust": 2.5
+      },
+      "00": {
+        "sadness": 5.0
+      },
+      "other": {}
+    },
+    "胃疼": {
+      "ai": {
+        "sadness": 6.0,
+        "disgust": 2.5
+      },
+      "00": {
+        "sadness": 5.0
+      },
+      "other": {}
+    },
+    "发烧": {
+      "ai": {
+        "fear": 7.5,
+        "sadness": 6.0
+      },
+      "00": {
+        "fear": 6.0,
+        "sadness": 5.0
+      },
+      "other": {}
+    },
+    "感冒": {
+      "ai": {
+        "sadness": 5.0,
+        "disgust": 2.5
+      },
+      "00": {
+        "sadness": 4.0
+      },
+      "other": {}
+    },
+    "咳嗽": {
+      "ai": {
+        "disgust": 4.0,
+        "sadness": 2.5
+      },
+      "00": {
+        "disgust": 2.5
+      },
+      "other": {}
+    },
+    "后悔": {
+      "ai": {
+        "sadness": 7.5,
+        "anger": 2.5
+      },
+      "00": {
+        "sadness": 6.0
+      },
+      "other": {}
+    },
+    "遗憾": {
+      "ai": {
+        "sadness": 6.0
+      },
+      "00": {
+        "sadness": 5.0
+      },
+      "other": {}
+    },
+    "绝望": {
+      "ai": {
+        "sadness": 12.5,
+        "fear": 7.5,
+        "trust": -7.5
+      },
+      "00": {
+        "sadness": 10.0,
+        "fear": 6.0,
+        "trust": -6.0
+      },
+      "other": {}
+    },
+    "崩溃": {
+      "ai": {
+        "sadness": 12.5,
+        "fear": 10.0,
+        "anger": 7.5
+      },
+      "00": {
+        "sadness": 10.0
+      },
+      "other": {}
+    },
+    "抓狂": {
+      "ai": {
+        "anger": 12.5,
+        "fear": 5.0,
+        "sadness": 2.5
+      },
+      "00": {
+        "anger": 10.0
+      },
+      "other": {}
+    },
+    "感动": {
+      "ai": {
+        "sadness": 4.0,
+        "joy": 7.5
+      },
+      "00": {
+        "sadness": 2.5,
+        "joy": 6.0
+      },
+      "other": {}
+    },
+    "获奖": {
+      "ai": {
+        "joy": 11.0,
+        "surprise": 6.0,
+        "trust": 5.0
+      },
+      "00": {
+        "joy": 9.0,
+        "surprise": 5.0
+      },
+      "other": {}
+    },
+    "上市": {
+      "ai": {
+        "joy": 11.0,
+        "anticipation": 10.0,
+        "surprise": 7.5
+      },
+      "00": {
+        "joy": 9.0,
+        "anticipation": 7.5,
+        "surprise": 6.0
+      },
+      "other": {}
+    },
+    "赚钱": {
+      "ai": {
+        "joy": 11.0,
+        "trust": 5.0,
+        "anticipation": 6.0
+      },
+      "00": {
+        "joy": 9.0,
+        "trust": 4.0,
+        "anticipation": 5.0
+      },
+      "other": {}
+    },
+    "亏钱": {
+      "ai": {
+        "sadness": 9.0,
+        "anger": 6.0,
+        "fear": 4.0
+      },
+      "00": {
+        "sadness": 7.5,
+        "anger": 5.0
+      },
+      "other": {}
+    },
+    "淋湿": {
+      "ai": {
+        "sadness": 5.0,
+        "disgust": 4.0,
+        "joy": -2.5
+      },
+      "00": {
+        "sadness": 4.0,
+        "disgust": 2.5
+      },
+      "other": {}
+    },
+    "淋雨": {
+      "ai": {
+        "sadness": 4.0,
+        "disgust": 2.5
+      },
+      "00": {
+        "sadness": 2.5
+      },
+      "other": {}
+    },
+    "下雨": {
+      "ai": {
+        "sadness": 2.5
+      },
+      "00": {
+        "sadness": 1.5
+      },
+      "other": {}
+    },
+    "潮湿": {
+      "ai": {
+        "disgust": 4.0
+      },
+      "00": {
+        "disgust": 2.5
+      },
+      "other": {}
+    },
+    "湿": {
+      "ai": {
+        "disgust": 2.5
+      },
+      "00": {
+        "disgust": 1.5
+      },
+      "other": {}
+    },
+    "淹没": {
+      "ai": {
+        "fear": 7.5,
+        "sadness": 6.0
+      },
+      "00": {
+        "fear": 6.0,
+        "sadness": 5.0
+      },
+      "other": {}
+    },
+    "溺水": {
+      "ai": {
+        "fear": 12.5,
+        "sadness": 7.5,
+        "anger": 2.5
+      },
+      "00": {
+        "fear": 10.0,
+        "sadness": 6.0
+      },
+      "other": {}
+    },
+    "淋": {
+      "ai": {
+        "sadness": 7.5,
+        "disgust": 6.0,
+        "joy": -3.5
+      },
+      "00": {
+        "sadness": 7.5,
+        "disgust": 6.0,
+        "joy": -3.5
+      },
+      "other": {}
+    },
+    "好喜欢": {
+      "ai": {
+        "joy": 7.5,
+        "trust": 7.5
+      },
+      "00": {
+        "joy": 7.5,
+        "trust": 7.5
+      },
+      "other": {}
+    },
+    "吃火锅": {
+      "ai": {
+        "joy": 7.5,
+        "anticipation": 4.0,
+        "energy": 5.0
+      },
+      "00": {
+        "joy": 9.0,
+        "anticipation": 5.0,
+        "energy": 6.0
+      },
+      "other": {}
+    },
+    "吃自助": {
+      "ai": {
+        "joy": 9.0,
+        "anticipation": 6.0,
+        "energy": 5.0
+      },
+      "00": {
+        "joy": 10.0,
+        "anticipation": 7.5,
+        "energy": 6.0
+      },
+      "other": {}
+    },
+    "吃烧烤": {
+      "ai": {
+        "joy": 7.5,
+        "anticipation": 4.0,
+        "disgust": 2.5
+      },
+      "00": {
+        "joy": 7.5,
+        "anticipation": 5.0,
+        "disgust": 1.5
+      },
+      "other": {}
+    },
+    "吃辣": {
+      "ai": {
+        "joy": 5.0,
+        "disgust": 5.0,
+        "surprise": 2.5
+      },
+      "00": {
+        "joy": 4.0,
+        "disgust": 4.0,
+        "surprise": 1.5
+      },
+      "other": {}
+    },
+    "喝奶茶": {
+      "ai": {
+        "joy": 4.0,
+        "disgust": 2.5
+      },
+      "00": {
+        "joy": 1.5,
+        "disgust": 4.0
+      },
+      "other": {}
+    },
+    "喝咖啡": {
+      "ai": {
+        "joy": 4.0,
+        "energy": 6.0
+      },
+      "00": {
+        "joy": 2.5,
+        "energy": 7.5
+      },
+      "other": {}
+    },
+    "喝可乐": {
+      "ai": {
+        "joy": 7.5,
+        "disgust": -1.5
+      },
+      "00": {
+        "joy": 10.0,
+        "disgust": -2.5
+      },
+      "other": {}
+    },
+    "喝百事": {
+      "ai": {
+        "joy": 2.5,
+        "disgust": 4.0
+      },
+      "00": {
+        "joy": -2.5,
+        "disgust": 6.0
+      },
+      "other": {}
+    },
+    "喝啤酒": {
+      "ai": {
+        "joy": 5.0,
+        "trust": 2.5
+      },
+      "00": {
+        "joy": 6.0,
+        "trust": 1.5
+      },
+      "other": {}
+    },
+    "吃甜食": {
+      "ai": {
+        "joy": 7.5,
+        "sadness": -2.5
+      },
+      "00": {
+        "joy": 9.0,
+        "sadness": -4.0
+      },
+      "other": {}
+    },
+    "吃零食": {
+      "ai": {
+        "joy": 5.0,
+        "disgust": 1.5
+      },
+      "00": {
+        "joy": 6.0,
+        "disgust": 1.5
+      },
+      "other": {}
+    },
+    "被夸": {
+      "ai": {
+        "joy": 7.5,
+        "trust": 5.0
+      },
+      "00": {
+        "joy": 6.0,
+        "trust": 4.0
+      },
+      "other": {}
+    },
+    "被表扬": {
+      "ai": {
+        "joy": 7.5,
+        "trust": 6.0
+      },
+      "00": {
+        "joy": 6.0,
+        "trust": 5.0
+      },
+      "other": {}
+    },
+    "被称赞": {
+      "ai": {
+        "joy": 7.5,
+        "trust": 6.0
+      },
+      "00": {
+        "joy": 6.0,
+        "trust": 5.0
+      },
+      "other": {}
+    },
+    "夸我": {
+      "ai": {
+        "joy": 9.0,
+        "trust": 7.5
+      },
+      "00": {
+        "joy": 7.5,
+        "trust": 6.0
+      },
+      "other": {}
+    },
+    "表扬我": {
+      "ai": {
+        "joy": 9.0,
+        "trust": 7.5
+      },
+      "00": {
+        "joy": 7.5,
+        "trust": 6.0
+      },
+      "other": {}
+    },
+    "称赞我": {
+      "ai": {
+        "joy": 9.0,
+        "trust": 7.5
+      },
+      "00": {
+        "joy": 7.5,
+        "trust": 6.0
+      },
+      "other": {}
+    },
+    "玩游戏": {
+      "ai": {
+        "joy": 7.5,
+        "anticipation": 6.0
+      },
+      "00": {
+        "joy": 6.0,
+        "anticipation": 5.0
+      },
+      "other": {}
+    },
+    "不开心": {
+      "ai": {
+        "sadness": 7.5
+      },
+      "00": {
+        "sadness": 6.0
+      },
+      "other": {}
+    },
+    "不舒服": {
+      "ai": {
+        "sadness": 5.0,
+        "disgust": 2.5
+      },
+      "00": {
+        "sadness": 4.0
+      },
+      "other": {}
+    },
+    "不爽": {
+      "ai": {
+        "sadness": 6.0,
+        "anger": 2.5
+      },
+      "00": {
+        "sadness": 5.0,
+        "anger": 1.5
+      },
+      "other": {}
+    },
+    "谢谢": {
+      "ai": {
+        "joy": 5.0,
+        "trust": 4.0
+      }
+    },
+    "辛苦了": {
+      "ai": {
+        "trust": 5.0,
+        "joy": 4.0
+      }
+    },
+    "想哭": {
+      "ai": {
+        "sadness": 9.0,
+        "trust": 2.5
+      },
+      "00": {
+        "sadness": 7.5
+      },
+      "other": {}
+    },
+    "想死": {
+      "ai": {
+        "sadness": 15.0,
+        "fear": 9.0,
+        "trust": -6.0
+      },
+      "00": {
+        "sadness": 12.5,
+        "fear": 7.5
+      },
+      "other": {}
+    },
+    "破防": {
+      "ai": {
+        "sadness": 7.5,
+        "anger": 4.0,
+        "surprise": 3.0
+      },
+      "00": {
+        "sadness": 6.0,
+        "anger": 3.0
+      },
+      "other": {}
+    }
+  },
+  "_negation_keywords": [
+    "不",
+    "不是",
+    "不会",
+    "没",
+    "没有",
+    "不是",
+    "没意思",
+    "不开心",
+    "不爽",
+    "不舒服",
+    "不舒",
+    "不喜欢",
+    "不爱",
+    "不信任",
+    "不担心",
+    "不害怕",
+    "不难过",
+    "不生气",
+    "不兴奋",
+    "不激动",
+    "不期待",
+    "不满意",
+    "不担心",
+    "不紧张",
+    "不甘心",
+    "不情愿"
+  ]
+}
